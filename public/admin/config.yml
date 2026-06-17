@@ -27,8 +27,6 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Body, name: body, widget: markdown }
-
       - label: Gallery Images
         name: gallery
         widget: list
