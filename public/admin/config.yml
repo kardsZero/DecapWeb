@@ -20,19 +20,30 @@ media_folder: public/uploads
 public_folder: /uploads
 
 collections:
-  - name: pages
-    label: Pages
-    folder: content/pages
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: Title, name: title, widget: string }
-      - label: Gallery Images
-        name: gallery
-        widget: list
-        field:
-          label: Image
-          name: image
-          widget: image
+  - name: about
+    label: About Page
+    files:
+      - file: content/about.md
+        label: About
+        name: about
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
 
+  - name: gallery
+    label: Gallery Page
+    files:
+      - file: content/gallery.md
+        label: Gallery
+        name: gallery
+        fields:
+          - { label: Title, name: title, widget: string }
+
+          - label: Images
+            name: gallery
+            widget: list
+            field:
+              label: Image
+              name: image
+              widget: image
  
